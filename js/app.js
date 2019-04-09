@@ -62,7 +62,7 @@ class Enemy {
         this.speed = speed;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images        
-    this.sprite = 'images/enemy-bug.png';
+        this.sprite = 'images/enemy-bug.png';
     }
     // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -72,6 +72,14 @@ class Enemy {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+
+    //restart enemy arrival and apply random speed 
+    if (this.x > 500) {
+        this.x = -10;
+        this.speed = 135 + Math.floor(Math.random() * 300);
+    }
+
+  
 }
     // Draw the enemy on the screen, required method for game
     render() {
@@ -94,12 +102,25 @@ class Player {
         this.speed = speed;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images        
-    this.sprite = 'images/char-cat-girl.png';
+        this.sprite = 'images/char-cat-girl.png';
     }
     // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
-    update(dt) {
-    this.x += this.speed * dt;
+    update() {
+        if (this.x > 400){
+            this.x = 400
+        }
+        if (this.x < 0){
+            this.x=0
+        }
+        if(this.y > 400){
+            this.y = 400
+        }
+        if(this.y < 0){
+            this.y = 0
+        }
+       
+    
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
@@ -109,22 +130,29 @@ class Player {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 
-    handleInput(keyPressed){
-
-    }
-
+	// Make the player move depending on the pressed key
+	handleInput(pressedKey) {
+		switch (pressedKey) {
+			case 'left':
+				this.x -= this.speed + 50;
+				break;
+			case 'up':
+				this.y -= this.speed + 30;
+				break;
+			case 'right':
+				this.x += this.speed + 50;
+				break;
+			case 'down':
+				this.y += this.speed + 30;
+                break;               
+        }
+    }   
 }
 
-
-
-
-
-
-let player = new Player(50, 135,220);
-let enemyPosition = [90, 60,55];
+let player = new Player(200, 400, 50);
+let enemyPosition = [50, 135, 220];
 
 let allEnemies = []
-
 
 enemyPosition.forEach(function(xx) {
     let enemy = new Enemy(0, xx, 100 + Math.floor(Math.random() * 500));
@@ -142,4 +170,5 @@ document.addEventListener('keyup', function(e) {
         40: 'down'
     };
     player.handleInput(allowedKeys[e.keyCode]);
+    
 });
