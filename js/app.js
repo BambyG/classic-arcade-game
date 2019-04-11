@@ -79,7 +79,16 @@ class Enemy {
         this.speed = 135 + Math.floor(Math.random() * 300);
     }
 
-  
+    //put the player back to its initial position when it touches 
+
+    if (player.x < this.x + 50 &&
+        player.x + 30 > this.x &&
+        player.y < this.y +60 &&
+        player.y + 30 > this.y) {
+        player.x = 200;
+        player.y = 400;
+    }
+
 }
     // Draw the enemy on the screen, required method for game
     render() {
@@ -87,7 +96,6 @@ class Enemy {
     }
 
 }
-
 
 // Now write your own player class
 // This class requires an update(), render() and
@@ -117,10 +125,10 @@ class Player {
             this.y = 400
         }
         if(this.y < 0){
-            this.y = 0
+                this.y = 400;
+                this.x = 200;
+            
         }
-       
-    
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
@@ -151,9 +159,7 @@ class Player {
 
 let player = new Player(200, 400, 50);
 let enemyPosition = [50, 135, 220];
-
 let allEnemies = []
-
 enemyPosition.forEach(function(xx) {
     let enemy = new Enemy(0, xx, 100 + Math.floor(Math.random() * 500));
     allEnemies.push(enemy);
