@@ -1,3 +1,28 @@
 body {
     text-align: center;
 }
+
+.points{
+    font-size: 50px;
+}
+
+.vies {
+    font-size: 40px;
+    color: red;
+}
+
+
+.replayButton{
+    width: 200px;
+    border-color:rgb(8, 8, 8);
+    padding: 10px 10px;
+    background-color: transparent;
+    border-width: medium;
+    color:rgb(8, 8, 8);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.message {
+    font-size: 30px;
+}

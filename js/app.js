@@ -87,8 +87,32 @@ class Enemy {
         player.y + 30 > this.y) {
         player.x = 200;
         player.y = 400;
+        let lives = document.getElementById('lives')
+        let numberLives = lives.innerHTML;
+        numberLives--
+        lives.innerHTML = numberLives;
+        
+
+        if (parseInt(numberLives) == 0)
+        setTimeout(() => {
+            
+            let b = document.getElementsByClassName('message')[0]
+            let score = document.getElementById('cumulatedPoints').innerHTML
+            b.innerHTML = "<p class='message'>Sorry, you lost! <br><span class ='scoreresult'>With " + numberLives + " lives and " + score + " points(s).</span></p>"
+            let btn = document.createElement("BUTTON")
+            btn.setAttribute("onclick", "refreshPage()");
+            btn.className += 'replayButton'
+            let t = document.createTextNode("REPLAY")
+            btn.appendChild(t);
+            b.appendChild(btn);
+            document.getElementsByTagName("canvas")[0].style.display = "none";
+        }, 500);
+         
     }
 
+
+ 
+    
 }
     // Draw the enemy on the screen, required method for game
     render() {
@@ -127,7 +151,10 @@ class Player {
         if(this.y < 0){
                 this.y = 400;
                 this.x = 200;
-            
+                let score = document.getElementById('cumulatedPoints')
+                let number = score.innerHTML;
+                number++
+                score.innerHTML = number;       
         }
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
@@ -178,3 +205,10 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
     
 });
+
+
+/*Refreshes the page*/
+function refreshPage() {
+    window.location.reload();
+}
+
