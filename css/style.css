@@ -3,12 +3,13 @@ body {
 }
 
 .points{
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .vies {
-    font-size: 40px;
+    font-size: 30px;
     color: red;
+    margin-top: -45px;
 }
 
 

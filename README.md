@@ -1,20 +1,51 @@
-# Classic Arcade Game Clone Project
 
-## Table of Contents
+# Memory Game Project
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+For this project, I am building an Arcade Game.
+The starter project has some HTML and CSS styling and JS for the main Engine. 
 
-## Instructions
+I am making the player and enemies move and interact in the canvas. 
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
+Please click [here](https://bamby-arcade-game.netlify.com/) to be redirected to the website. 
 
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
+![Illustration](./images/game.png)
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+# Technologies
 
-## Contributing
+* HMTL
+* CSS
+* JAVASCRIPT
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+# Launch
+
+ The project does not have minimum hardware requirements.
+ Just view the HTML Page in Your Browser.
+ Please click [here](https://bamby-arcade-game.netlify.com/) to be redirected to the website.
+
+ # Contributing 
+
+This project was written by Bamby Gassama inspired by Udacity Nanodegree 3nd project assignment. 
+
+# Licence
+The MIT License (MIT)
+
+Copyright (c) 2019 Bamby Gassama
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
