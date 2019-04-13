@@ -4,12 +4,14 @@ body {
 
 .points{
     font-size: 40px;
+    margin-top: -20px;
 }
 
 .vies {
     font-size: 30px;
     color: red;
-    margin-top: -45px;
+    margin-top: -20px;
+
 }
 
 
@@ -27,3 +29,17 @@ body {
 .message {
     font-size: 30px;
 }
+
+
+.vies img {
+  width: 30px; 
+}
+
+
+.not_visible{
+    display:none;
+}
+
+ .is_visible{
+     display:normal;
+ }
