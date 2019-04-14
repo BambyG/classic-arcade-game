@@ -32,7 +32,7 @@ Once a the player collides with an enemy, the game is reset and the player moves
 
 Once the player reaches the water (i.e., the top of the game board), the game is won. 
 
-The player as 3 lives.
+The player has 3 lives.
 The player loses one life everytime he/she collides with and enemy! 
 
 When winning the player earn an extra life! 
