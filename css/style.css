@@ -1,20 +1,15 @@
 body {
     text-align: center;
 }
-
 .points{
     font-size: 40px;
     margin-top: -20px;
 }
-
 .vies {
     font-size: 30px;
     color: red;
     margin-top: -20px;
-
 }
-
-
 .replayButton{
     width: 200px;
     border-color:rgb(8, 8, 8);
@@ -25,21 +20,15 @@ body {
     font-size: 2rem;
     cursor: pointer;
 }
-
 .message {
     font-size: 30px;
 }
-
-
 .vies img {
-  width: 30px; 
+    width: 30px;
 }
-
-
 .not_visible{
     display:none;
 }
-
- .is_visible{
-     display:normal;
- }
+.is_visible{
+    display:normal;
+}
